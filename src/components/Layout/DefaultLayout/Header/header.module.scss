@@ -1,0 +1,59 @@
+.hide {
+    display: none !important;
+}
+
+/* Navbar */
+.nav {
+    height: 70px;
+    background-color: var(--nav-bg) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* background-color: #ccc; */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--black2) !important;
+}
+
+.innerNav {
+    height: 70px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    background: var(--vp-home-hero-name-background);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--vp-home-hero-name-color);
+    width: 200px;
+}
+
+.navCollapse {
+    flex-grow: unset;
+}
+
+.navMenu {
+    display: flex;
+    align-items: center;
+}
+
+.navItem {}
+
+.navLink {
+    text-decoration: none;
+    padding: 0 1.5rem !important;
+    color: var(--nav-color) !important;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.darkMode {
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 200px;
+    text-align: right;
+}
