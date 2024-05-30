@@ -46,6 +46,7 @@
 
     --red-dark: #bf4848;
     --red: #f32020;
+    --red-2: #D8032B;
 
     --pink-red: #e23b3b;
 
@@ -63,17 +64,26 @@
     --gray-dark-3: #bdbdbd;
     --gray-light: #f0f0f0;
 
-    --primary: var(--blue-dark-4);
+    --primary: var(--red-2);
     --odd-bg: var(--white);
     --odd-color: var(--black);
     --even-bg: var(--white-light);
     --even-color: var(--black);
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--blue-dark-4) 30%, var(--blue-dark));
+    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--primary) 30%, var(--blue-dark));
 
     --nav-bg: var(--white);
     --nav-color: var(--black);
     --nav-resume-color: var(--white);
+    --nav-btn-login-color: var(--black);
+    --nav-btn-signup-bg: var(--primary);
+    --nav-btn-signup-color: var(--white);
+
+    --navbar-bg: var(--blue-light-2);
+    --navbar-color: var(--black);
+    --navbar-item-hover-color: var(--primary);
+    --navbar-item-2-hover-color: var(--black);
+    --navbar-logo-color: var(--primary);
 
     --border-color: var(--black-blue-light-4);
 }
@@ -89,6 +99,9 @@
 
     --nav-bg: var(--blue-dark-3);
     --nav-color: var(--white);
+    --nav-btn-login-color: var(--white);
+    --nav-btn-signup-bg: var(--pink);
+    --nav-btn-signup-color: var(--white);
 
     --border-color: var(--white);
 }
@@ -97,16 +110,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    transition: all 0.15s ease;
+    // transition: all 0.1s ease;
 }
 
 html {
 }
 
 body {
-    font-family: "Nunito Sans", sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .textBold {
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
