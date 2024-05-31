@@ -44,9 +44,13 @@
     --green-dark: #48bf69;
     --green: #50f07d;
 
-    --red-dark: #bf4848;
+    --red-black: #3a1818;
+    --red-dark: #9D0000;
     --red: #f32020;
     --red-2: #D8032B;
+    --red-light: #FF7168;
+    --red-light-more: #ffe9ed;
+    --red-light-dark: #eee5e5;
 
     --pink-red: #e23b3b;
 
@@ -65,14 +69,16 @@
     --gray-light: #f0f0f0;
 
     --primary: var(--red-2);
+    --primary-dark: var(--red-black);
+    --primary-light: var(--red-light-more);
     --odd-bg: var(--white);
     --odd-color: var(--black);
-    --even-bg: var(--white-light);
+    --even-bg: var(--primary-light);
     --even-color: var(--black);
     --vp-home-hero-name-color: transparent;
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--primary) 30%, var(--blue-dark));
+    --vp-home-hero-name-background: -webkit-linear-gradient(135deg, var(--primary-dark), var(--primary));
 
-    --nav-bg: var(--white);
+    --nav-bg: var(--primary-light);
     --nav-color: var(--black);
     --nav-resume-color: var(--white);
     --nav-btn-login-color: var(--black);
@@ -84,18 +90,43 @@
     --navbar-item-hover-color: var(--primary);
     --navbar-item-2-hover-color: var(--black);
     --navbar-logo-color: var(--primary);
+    --navbar-user-name: var(--primary);
+    --navbar-user-text: var(--black);
+    --navbar-darkmode-bg: var(--primary-light);
+    --navbar-darkmode-color: var(--black);
+    --navbar-darkmode-active-bg: var(--primary);
+    --navbar-darkmode-active-color: var(--white);
 
-    --border-color: var(--black-blue-light-4);
+    --border-color: var(--white-dark);
+
+    --home-bg: var(--primary-light);
+    --home-color: var(--black);
+    --home-btn-bg: var(--primary);
+    --home-btn-color: var(--white);
+    --home-options-bg: var(--primary);
+    --home-option-bg: var(--white);
+    --home-option-color: var(--white);
+    --home-option-bg-active: var(--white);
+    --home-option-color-active: var(--primary);
+    --home-block-arrivals-title-color: -webkit-linear-gradient(215deg, var(--black) 60%, var(--primary));
+    --home-block-arrivals-title-color-2: var(--primary);
+
+    --home-block-item-bg: var(--white);
+    --home-block-item-old-price-color: var(--gray-dark);
+    --home-block-item-price-color: var(--black);
+    --home-block-item-btn-bg: var(--primary);
+    --home-block-item-btn-color: var(--white);
 }
 
 [data-theme='dark'] {
-    --primary: var(--pink);
+    --primary: var(--red-2);
+    --primary-dark: var(--red-black);
+    --primary-light: var(--red-light-more);
     --odd-bg: var(--black-2);
     --odd-color: var(--white);
     --even-bg: var(--black-blue-light-2);
     --even-color: var(--white);
     --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--pink) 30%, var(--purple-2));
-
 
     --nav-bg: var(--blue-dark-3);
     --nav-color: var(--white);
@@ -104,6 +135,8 @@
     --nav-btn-signup-color: var(--white);
 
     --border-color: var(--white);
+
+    
 }
 
 * {

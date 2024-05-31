@@ -4,7 +4,15 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faCartShopping, faMagnifyingGlass, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCartShopping,
+    faGear,
+    faMagnifyingGlass,
+    faMoneyBill,
+    faRightFromBracket,
+    faShoppingCart,
+    faUser,
+} from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     const [isLight, setIsLight] = useState(true);
@@ -15,13 +23,25 @@ function Header() {
     });
     const [text, setText] = useState('');
 
-    const handleChangeDarkMode = () => {
-        var currentTheme = localStorage.getItem('theme');
-        if (currentTheme && currentTheme === 'dark') {
+    // const handleChangeDarkMode = () => {
+    //     var currentTheme = localStorage.getItem('theme');
+    //     if (currentTheme && currentTheme === 'dark') {
+    //         document.documentElement.setAttribute('data-theme', 'light');
+    //         localStorage.setItem('theme', 'light');
+    //         setIsLight(true);
+    //     } else if (!currentTheme || currentTheme === 'light') {
+    //         document.documentElement.setAttribute('data-theme', 'dark');
+    //         localStorage.setItem('theme', 'dark');
+    //         setIsLight(false);
+    //     }
+    // };
+
+    const handleChangeDarkMode = (mode) => {
+        if (mode === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
             localStorage.setItem('theme', 'light');
             setIsLight(true);
-        } else if (!currentTheme || currentTheme === 'light') {
+        } else if (mode === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
             localStorage.setItem('theme', 'dark');
             setIsLight(false);
@@ -117,6 +137,7 @@ function Header() {
                                     </div>
                                 </div>
                             </div>
+
                             <button
                                 type="button"
                                 className={clsx(styles.btnUser)}
@@ -160,20 +181,89 @@ function Header() {
                                 >
                                     <FontAwesomeIcon icon={faUser} />
                                 </button>
-                                <ul className="dropdown-menu">
+                                <ul className={clsx('dropdown-menu', styles.dropdownMenu)}>
                                     <li>
-                                        <a className="dropdown-item" href="./">
-                                            Action
+                                        <div className={clsx(styles.dropdownItem)} href="./">
+                                            <div className={clsx(styles.dropdownItem__image)}>
+                                                <img
+                                                    src={currentUser.avatar}
+                                                    alt="avatar"
+                                                    className={clsx('img-fluid')}
+                                                />
+                                            </div>
+                                            <div className={clsx(styles.dropdownItem__info)}>
+                                                <a className={clsx(styles.dropdownItem__name)} href="./">
+                                                    {currentUser.name}
+                                                </a>
+                                                <div className={clsx(styles.dropdownItem__email)}>
+                                                    {currentUser.email}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div className={clsx(styles.dropdownItem, styles.dropdownItem__border)}>
+                                            <div className={clsx(styles.dropdownItem__darkmode)}>
+                                                <div
+                                                    className={clsx(
+                                                        styles.dropdownItem__darkmode__item,
+                                                        `${isLight && styles.dropdownItem__darkmode__item__active}`,
+                                                    )}
+                                                    onClick={() => handleChangeDarkMode('light')}
+                                                >
+                                                    <div className={clsx(styles.dropdownItem__darkmode__icon)}>
+                                                        <FontAwesomeIcon icon={faSun} />
+                                                    </div>
+                                                    <div className={clsx(styles.dropdownItem__darkmode__text)}>
+                                                        Light
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    className={clsx(
+                                                        styles.dropdownItem__darkmode__item,
+                                                        `${!isLight && styles.dropdownItem__darkmode__item__active}`,
+                                                    )}
+                                                    onClick={() => handleChangeDarkMode('dark')}
+                                                >
+                                                    <div className={clsx(styles.dropdownItem__darkmode__icon)}>
+                                                        <FontAwesomeIcon icon={faMoon} />
+                                                    </div>
+                                                    <div className={clsx(styles.dropdownItem__darkmode__text)}>
+                                                        Dark
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a
+                                            className={clsx(
+                                                'dropdown-item',
+                                                styles.dropdownItem,
+                                                styles.dropdownItem__border,
+                                            )}
+                                            href="./"
+                                        >
+                                            <div className={clsx(styles.dropdownItem__icon)}>
+                                                <FontAwesomeIcon icon={faMoneyBill} />
+                                            </div>
+                                            <div className={clsx(styles.dropdownItem__text)}>Orders</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="./">
-                                            Another action
+                                        <a className={clsx('dropdown-item', styles.dropdownItem)} href="./">
+                                            <div className={clsx(styles.dropdownItem__icon)}>
+                                                <FontAwesomeIcon icon={faGear} />
+                                            </div>
+                                            <div className={clsx(styles.dropdownItem__text)}>Setting</div>
                                         </a>
                                     </li>
                                     <li>
-                                        <a className="dropdown-item" href="./">
-                                            Something else here
+                                        <a className={clsx('dropdown-item', styles.dropdownItem)} href="./">
+                                            <div className={clsx(styles.dropdownItem__icon)}>
+                                                <FontAwesomeIcon icon={faRightFromBracket} />
+                                            </div>
+                                            <div className={clsx(styles.dropdownItem__text)}>Logout</div>
                                         </a>
                                     </li>
                                 </ul>

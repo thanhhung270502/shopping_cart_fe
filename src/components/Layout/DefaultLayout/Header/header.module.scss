@@ -1,8 +1,9 @@
 .nav {
     background-color: var(--nav-bg);
+    // background-color: transparent;
     width: 100%;
     height: 60px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .inner {
@@ -119,3 +120,99 @@
     border-radius: 100px;
     border: none;
 }
+
+// Dropdown
+.dropdownMenu {
+    width: 350px;
+}
+
+.dropdownItem {
+    display: flex;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem 0;
+    color: var(--navbar-user-text);
+}
+
+.dropdownItem__icon {
+    width: 30px;
+}
+
+.dropdownItem__text {
+
+}
+
+.dropdownItem__image {
+    width: 25%;
+
+    img {
+        border-radius: 10px;
+    }
+}
+
+.dropdownItem__info {
+    width: 75%;
+    padding: 0 0.5rem;
+}
+
+.dropdownItem__name {
+    font-weight: bold;
+    color: var(--navbar-user-name);
+    
+    &:hover {
+        color: var(--navbar-user-name);
+    }
+}
+
+
+.dropdownItem__email {
+    overflow: hidden;          /* Ẩn phần nội dung tràn ra ngoài khung */
+    text-overflow: ellipsis;   /* Hiển thị dấu ba chấm */
+    white-space: nowrap;       
+}
+
+.dropdownItem__darkmode {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--navbar-darkmode-bg);
+    color: var(--navbar-darkmode-color);
+    border-radius: 10px;
+    margin: 0.25rem 0;
+}
+
+.dropdownItem__border {
+    // border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dropdownItem__darkmode__item {
+    display: flex;
+    align-items: center;
+    width: 48%;
+    padding: 0.25rem 1rem;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+        background-color: var(--navbar-darkmode-active-bg);
+        color: var(--navbar-darkmode-active-color);
+    }
+}
+
+.dropdownItem__darkmode__item__active {
+    background-color: var(--navbar-darkmode-active-bg);
+    color: var(--navbar-darkmode-active-color);
+}
+
+.dropdownItem__darkmode__icon {
+    width: 30px;
+}
+
+.dropdownItem__darkmode__text {
+
+}
+

@@ -1,3 +1,180 @@
 .home {
-    height: 100vh;
+    min-height: 100vh;
+    color: var(--home-color);
+}
+
+.introduction {
+    background-color: var(--odd-bg);
+    color: var(--odd-color);
+    height: 50vh;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .inner {
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 4rem;
+        font-weight: bold;
+        background: var(--vp-home-hero-name-background);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: var(--vp-home-hero-name-color);
+    }
+
+    .subTitle {
+        font-weight: bold;
+        font-size: 2.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .btnShop {
+        font-weight: bold;
+        // background-color: var(--home-btn-bg);
+
+        background-color: #182b3a;
+        background-image: linear-gradient(315deg, #182b3a 0%, var(--home-block-item-btn-bg) 74%);
+        color: var(--home-btn-color);
+        padding: 0.75rem 2.5rem;
+        border-radius: 100px;
+    }
+}
+
+.products {
+    background-color: var(--even-bg);
+    color: var(--even-color);
+    min-height: 100vh;
+
+    .inner {
+        padding: 2rem 0;
+        position: relative;
+    }
+
+    .optionsBar {
+        position: absolute;
+        top: -20px;
+        // background-color: var(--home-options-bg);
+
+        background-color: #182b3a;
+        background-image: linear-gradient(315deg, #3a1818 0%, var(--home-block-item-btn-bg) 74%);
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        padding: 0.5rem;
+        border-radius: 100px;
+    }
+    
+    .option {
+        background-color: transparent;
+        color: var(--home-option-color);
+        font-weight: bold;
+        padding: 0.25rem 1rem;
+        margin: 0 0.25rem;
+        border-radius: 100px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: var(--home-option-bg-active);
+            color: var(--home-option-color-active);
+        }
+    }
+
+    .optionActive {
+        background-color: var(--home-option-bg-active);
+        color: var(--home-option-color-active);
+    }
+
+    
+    .block {
+        background-color: var(--even-bg);
+        padding: 1rem 0;
+
+        .block__items {
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            // padding-bottom: 1rem;
+            scrollbar-width: thin;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 1.5rem;
+            padding: 1rem 0;
+            background: var(--home-block-arrivals-title-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: var(--vp-home-hero-name-color);
+
+            span {
+                padding-right: 1rem;
+                color: var(--home-block-arrivals-title-color-2);
+            }
+        }
+        
+        .item {
+            // width: 25%;
+            padding: 0.5rem 1.5rem 1.5rem;
+            margin: 0 0.5rem;
+            background-color: var(--home-block-item-bg);
+            border-radius: 10px;
+            position: relative;
+
+            .item__name {
+                color: var(--home-block-title-color);
+                font-weight: bold;
+                padding: 0.5rem 0 1rem;
+            }
+
+            .item__image {
+                img {
+                    border-radius: 10px;
+                }
+            }
+
+            .item__prices {
+                // position: absolute;
+                // bottom: -15px;
+                display: flex;
+                align-items: center;
+            }
+
+            .item__price {
+                padding: 1rem 0 0.75rem;
+                border-radius: 10px;
+                font-weight: bold;  
+            }
+
+            .item__oldPrice {
+                padding-right: 0.5rem;
+                color: var(--home-block-item-old-price-color);
+                text-decoration: line-through;
+            }
+
+            .item__newPrice {
+                color: var(--home-block-item-price-color);
+            }
+
+            .item__btn {
+                width: fit-content;
+                padding: 0.25rem 1rem;
+                border-radius: 5px;
+            }
+
+            .item__btnBuy {
+                // background-color: var(--home-block-item-btn-bg);
+                background-color: #182b3a;
+                background-image: linear-gradient(315deg, #182b3a 0%, var(--home-block-item-btn-bg) 74%);
+            }
+            
+            .item__link {
+                color: var(--home-block-item-btn-color);
+                font-weight: bold;
+            }
+        }
+    }
 }
