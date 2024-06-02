@@ -48,7 +48,7 @@
 .products {
     background-color: var(--even-bg);
     color: var(--even-color);
-    min-height: 100vh;
+    min-height: 50vh;
 
     .inner {
         padding: 2rem 0;
@@ -125,9 +125,20 @@
             position: relative;
 
             .item__name {
-                color: var(--home-block-title-color);
+                color: var(--home-block-arrivals-title-color-2);
                 font-weight: bold;
-                padding: 0.5rem 0 1rem;
+                padding: 1rem 0 0.5rem;
+            }
+
+            .item__reviews {
+                display: flex;
+                align-items: center;
+                padding-bottom: 1rem;
+            }
+
+            .item__icon {
+                width: 25px;
+                color: var(--home-block-star);
             }
 
             .item__image {

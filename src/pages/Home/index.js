@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './home.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiamond } from '@fortawesome/free-solid-svg-icons';
+import { faDiamond, faStar } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 function Home() {
@@ -91,7 +91,13 @@ function Home() {
                                             </div>
                                             <div className={clsx(styles.block__items)}>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -118,7 +124,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -145,7 +157,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -172,7 +190,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -199,7 +223,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -226,7 +256,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -266,7 +302,13 @@ function Home() {
                                             </div>
                                             <div className={clsx(styles.block__items)}>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -293,7 +335,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -320,7 +368,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -347,7 +401,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -374,7 +434,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -401,7 +467,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -441,7 +513,13 @@ function Home() {
                                             </div>
                                             <div className={clsx(styles.block__items)}>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -468,7 +546,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -495,7 +579,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -522,7 +612,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -549,7 +645,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -576,7 +678,13 @@ function Home() {
                                                     </div>
                                                 </div>
                                                 <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem</div>
+                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
+                                                    <div className={clsx(styles.item__reviews)}>
+                                                        <div className={clsx(styles.item__icon)}>
+                                                            <FontAwesomeIcon icon={faStar} />
+                                                        </div>
+                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
+                                                    </div>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"

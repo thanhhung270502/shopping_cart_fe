@@ -110,14 +110,31 @@
     --home-option-color: var(--white);
     --home-option-bg-active: var(--white);
     --home-option-color-active: var(--primary);
+    
+    --home-block-star: var(--primary);
     --home-block-arrivals-title-color: -webkit-linear-gradient(215deg, var(--black) 60%, var(--primary));
     --home-block-arrivals-title-color-2: var(--primary);
-
     --home-block-item-bg: var(--white);
     --home-block-item-old-price-color: var(--gray-dark);
     --home-block-item-price-color: var(--black);
     --home-block-item-btn-bg: var(--primary);
     --home-block-item-btn-color: var(--white);
+
+    --products-bg: var(--white);
+    --products-color: var(--black);
+    --products-block-border: var(--gray-light);
+    --products-block-border-active: var(--primary);
+    --products-search-color: var(--gray-dark-2);
+    --products-search-text: var(--black);
+    --products-product-name: var(--primary);
+    --products-product-old-price-color: var(--gray-dark);
+    --products-product-price-color: var(--black);
+    --products-product-btn-bg: var(--primary);
+    --products-preview-size-bg: var(--gray-light);
+    --products-preview-size-color: var(--black);
+    --products-preview-size-border: var(--gray-light);
+    --products-preview-size-border-active: var(--primary);
+    // --products-search-color: var(--gray-dark-3);
 }
 
 [data-theme='dark'] {
@@ -162,3 +179,58 @@ body {
 a {
     text-decoration: none;
 }
+
+.red {
+    background-color: var(--red-2);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.blue {
+    background-color: var(--blue-dark-4);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.green {
+    background-color: var(--green-dark);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.black {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.white {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.orange {
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.yellow {
+    background-color: var(--yellow);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.pink {
+    background-color: var(--pink);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+
+.purple {
+    background-color: var(--purple-2);
+    color: var(--white);
+    border: 1px solid var(--black);
+}
+

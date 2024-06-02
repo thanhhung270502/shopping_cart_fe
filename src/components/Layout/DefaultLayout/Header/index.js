@@ -74,7 +74,7 @@ function Header() {
                             </a>
                         </div>
                         <div className={clsx(styles.item)}>
-                            <a href="./" className={clsx(styles.link)}>
+                            <a href="/products" className={clsx(styles.link)}>
                                 Products
                             </a>
                         </div>
