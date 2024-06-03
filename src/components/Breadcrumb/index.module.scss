@@ -1,0 +1,20 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.breadcrumbItem {
+    font-weight: bold;
+    color: var(--breadcrumbs-color);
+}
+
+.breadcrumbDivider {
+    padding: 0 6px;
+    font-size: 12px;
+    color: var(--breadcrumbs-color);
+}
+
+.breadcrumbItemActive {
+    color: var(--breadcrumbs-color-active);
+}

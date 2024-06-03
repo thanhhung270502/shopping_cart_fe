@@ -7,6 +7,7 @@
 :root {
     --black: #000;
     --black-2: #1b1b1f;
+    --black-3: #182b3a;
     --black-blue: #202127;
     --black-blue-light: #2e2e32;
     --black-blue-light-2: #2b2f36;
@@ -78,6 +79,9 @@
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(135deg, var(--primary-dark), var(--primary));
 
+    --breadcrumbs-color: var(--black);
+    --breadcrumbs-color-active: var(--black);
+
     --nav-bg: var(--primary-light);
     --nav-color: var(--black);
     --nav-resume-color: var(--white);
@@ -134,7 +138,19 @@
     --products-preview-size-color: var(--black);
     --products-preview-size-border: var(--gray-light);
     --products-preview-size-border-active: var(--primary);
-    // --products-search-color: var(--gray-dark-3);
+
+    --product-bg: var(--white);
+    --product-color: var(--black);
+    --product-border: var(--gray-light);
+    --product-bonus-bg: var(--primary);
+    --product-bonus-color: var(--white);
+    --product-quantity-bg: var(--white-light);
+    --product-quantity-color: var(--gray-dark);
+    --product-quantity-num-color: var(--black);
+    --product-btn-add: -webkit-linear-gradient(315deg, var(--black-3) 0%, var(--primary) 74%);
+    --product-btn-add-border: var(--primary);
+    --product-btn-add-hover-bg: var(--primary);
+    --product-btn-add-hover-color: var(--white);
 }
 
 [data-theme='dark'] {
@@ -234,3 +250,9 @@ a {
     border: 1px solid var(--black);
 }
 
+.img__fluid {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    aspect-ratio: 1/1;
+}

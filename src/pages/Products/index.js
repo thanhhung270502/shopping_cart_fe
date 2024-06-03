@@ -89,9 +89,11 @@ function Products() {
                             <div className={clsx(styles.searchBar__seachIcon)}>
                                 <FontAwesomeIcon icon={faMagnifyingGlass} />
                             </div>
-                            <div className={clsx(styles.searchBar__clearIcon)}>
-                                <FontAwesomeIcon icon={faCircleXmark} />
-                            </div>
+                            {_search.length > 0 && (
+                                <div className={clsx(styles.searchBar__clearIcon)}>
+                                    <FontAwesomeIcon icon={faCircleXmark} />
+                                </div>
+                            )}
                         </div>
                         {search && (
                             <div className={clsx(styles.search)}>
