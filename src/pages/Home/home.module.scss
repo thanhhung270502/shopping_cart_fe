@@ -6,11 +6,12 @@
 .introduction {
     background-color: var(--odd-bg);
     color: var(--odd-color);
-    height: 50vh;
+    min-height: 50vh;
     display: flex;  
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 4rem 0;
 
     .inner {
         display: flex;  
@@ -61,7 +62,7 @@
         // background-color: var(--home-options-bg);
 
         background-color: #182b3a;
-        background-image: linear-gradient(315deg, #3a1818 0%, var(--home-block-item-btn-bg) 74%);
+        background-image: linear-gradient(315deg, var(--home-block-item-btn-bg-2) 0%, var(--home-block-item-btn-bg) 74%);
         display: flex;
         align-items: center;
         width: fit-content;
@@ -104,30 +105,44 @@
 
         .title {
             font-weight: bold;
-            font-size: 1.5rem;
-            padding: 1rem 0;
-            background: var(--home-block-arrivals-title-color);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: var(--vp-home-hero-name-color);
-
+            font-size: 1.15rem;
+            padding: 0.75rem 0;
+            background-color: var(--home-block-arrivals-title-bg);
+            color: var(--home-block-arrivals-title-color);
+            
             span {
                 padding-right: 1rem;
-                color: var(--home-block-arrivals-title-color-2);
             }
+        }
+        
+        .title1 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            border-bottom: 4px solid var(--home-block-arrivals-title-color);
+        }
+
+        .title2 {
+            padding: 0.75rem 1rem;
+            color: var(--home-block-arrivals-title-color-2);
+        }
+        
+        .title3 {
+            padding: 0.75rem 1rem;
+            color: var(--home-block-item-price-color);
         }
         
         .item {
             // width: 25%;
-            padding: 0.5rem 1.5rem 1.5rem;
-            margin: 0 0.5rem;
+            // padding:  ;
+            margin-right: 0.5rem;
             background-color: var(--home-block-item-bg);
             border-radius: 10px;
             position: relative;
+            color: var(--home-block-item-color);
 
             .item__name {
-                color: var(--home-block-arrivals-title-color-2);
                 font-weight: bold;
-                padding: 1rem 0 0.5rem;
+                padding-top: 0.5rem;
             }
 
             .item__reviews {
@@ -143,27 +158,32 @@
 
             .item__image {
                 img {
-                    border-radius: 10px;
+                    // border-radius: 10px;
                 }
             }
 
             .item__prices {
                 // position: absolute;
                 // bottom: -15px;
-                display: flex;
-                align-items: center;
+                // display: flex;
+                // align-items: center;
+                padding: 0.5rem 0;
             }
 
             .item__price {
-                padding: 1rem 0 0.75rem;
                 border-radius: 10px;
                 font-weight: bold;  
             }
 
             .item__oldPrice {
-                padding-right: 0.5rem;
-                color: var(--home-block-item-old-price-color);
-                text-decoration: line-through;
+                padding-top: 0.25rem;
+                font-size: 0.9rem;
+                
+                span {
+                    padding-right: 0.25rem;
+                    color: var(--home-block-item-old-price-color);
+                    text-decoration: line-through;
+                }
             }
 
             .item__newPrice {

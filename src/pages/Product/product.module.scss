@@ -53,7 +53,7 @@
     .preview__name {
         color: var(--products-product-name);
         font-weight: bold;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .preview__reviews {
@@ -69,6 +69,11 @@
 
     .preview_reviews__text {
 
+    }
+
+    .preview__description {
+        padding-bottom: 1rem;
+        text-align: justify;
     }
 
     .preview__prices {
@@ -229,5 +234,71 @@
         background-image: linear-gradient(315deg, #182b3a 0%, var(--home-block-item-btn-bg) 74%);
         color: var(--home-block-item-btn-color);
         border: 2px solid var(--product-btn-add-border);
+    }
+}
+
+.reviews {
+    padding: 2rem 0;
+    background-color: var(--product-reviews-bg);
+    color: var(--product-reviews-color);
+
+    .reviews__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+    }
+
+    .reviews__block {
+        padding: 2rem;
+        border: 2px solid var(--product-border);
+        border-radius: 5px;
+        margin-bottom: 1rem;
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .user {
+            display: flex;
+            align-items: center;
+
+            .user__image {
+                width: 50px;
+
+                img {
+                    border-radius: 100%;
+                }
+            }
+
+            .user__nT {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding-left: 0.75rem;
+            }
+
+            .user__time {
+
+                color: var(--product-reviews-time);
+            }
+
+            .user__name {
+                font-weight: bold;
+            }
+        }
+
+        .rating {
+            span {
+                color: var(--product-reviews-star);
+                padding-right: 0.5rem;
+            }
+        }
+
+        .body {
+            padding-top: 1rem;
+            text-align: justify;
+        }
     }
 }

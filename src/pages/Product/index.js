@@ -38,8 +38,8 @@ function Product() {
             <div className={clsx('container')}>
                 <div className={clsx(styles.inner)}>
                     <BreadCrumb items={['Home', 'Products', 'Lorem Ipsum']} links={['/', '/products']} />
-                    <div className={clsx('d-flex', 'align-items-start', 'pt-5')}>
-                        <div className="col-lg-5 col-md-12">
+                    <div className={clsx('d-flex', 'align-items-start', 'pt-4')}>
+                        <div className="col-12 col-lg-5">
                             <div className={clsx(styles.leftSite)}>
                                 <div className={clsx(styles.mainImage)}>
                                     <img src="/images/clothes/2-2-4-1.jpg" className="img__fluid" alt="" />
@@ -79,6 +79,16 @@ function Product() {
                                         <FontAwesomeIcon icon={faStar} />
                                     </div>
                                     <div className={clsx(styles.preview_reviews__text)}>4.8 (511 Review)</div>
+                                </div>
+                                <div className={clsx(styles.preview__description)}>
+                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                    Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                    unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                    It has survived not only five centuries, but also the leap into electronic
+                                    typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                                    the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                                    with desktop publishing software like Aldus PageMaker including versions of Lorem
+                                    Ipsum.
                                 </div>
                                 <div className={clsx(styles.preview__prices)}>
                                     <div className={clsx(styles.preview__price, styles.preview__oldPrice)}>$17.25</div>
@@ -170,6 +180,47 @@ function Product() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className={clsx(styles.reviews)}>
+                        <div className="d-flex align-items-center justify-content-between">
+                            <div className={clsx(styles.reviews__title)}>Reviews & Rating</div>
+                            <a href="./" className={clsx(styles.reviews__link)}>
+                                View All Reviews
+                            </a>
+                        </div>
+                        {sizes.map(() => {
+                            return (
+                                <div className={clsx(styles.reviews__block)}>
+                                    <div className={clsx(styles.header)}>
+                                        <div className={clsx(styles.user)}>
+                                            <div className={clsx(styles.user__image)}>
+                                                <img src="/images/kim1.png" className="img__fluid" alt="" />
+                                            </div>
+                                            <div className={clsx(styles.user__nT)}>
+                                                <div className={clsx(styles.user__name)}>Kim Ji-Won</div>
+                                                <div className={clsx(styles.user__time)}>May 27, 2024</div>
+                                            </div>
+                                        </div>
+                                        <div className={clsx(styles.rating)}>
+                                            <span>
+                                                <FontAwesomeIcon icon={faStar} />
+                                            </span>
+                                            4.9
+                                        </div>
+                                    </div>
+                                    <div className={clsx(styles.body)}>
+                                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                                        unknown printer took a galley of type and scrambled it to make a type specimen
+                                        book. It has survived not only five centuries, but also the leap into electronic
+                                        typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                                        with the release of Letraset sheets containing Lorem Ipsum passages, and more
+                                        recently with desktop publishing software like Aldus PageMaker including
+                                        versions of Lorem Ipsum.
+                                    </div>
+                                </div>
+                            );
+                        })}
                     </div>
                 </div>
             </div>

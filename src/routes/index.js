@@ -5,6 +5,7 @@ import { OnlyHeader } from '~/components/Layout';
 import Home from '~/pages/Home';
 import Product from '~/pages/Product';
 import Products from '~/pages/Products';
+import Shop from '~/pages/Shop';
 // import Product_Index from '~/pages/Product_Index';
 import Test from '~/pages/Test';
 import Upload from '~/pages/Upload';
@@ -20,6 +21,11 @@ const publicRoutes = [
     {
         path: '/products',
         component: Products,
+    },
+    // http://localhost:3000/shops/:short_name
+    {
+        path: '/shops/:short_name',
+        component: Shop,
     },
     // http://localhost:3000/products/1
     {

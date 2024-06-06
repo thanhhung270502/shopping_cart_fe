@@ -16,7 +16,7 @@ function Products() {
 
     const [_size, setSize] = useState('');
     const [_color, setColor] = useState('');
-    const [_search, setSearch] = useState('');
+    const [_search, setSearch] = useState('peak');
 
     const handleChangeSize = (newSize) => {
         setSize(newSize);
@@ -79,25 +79,9 @@ function Products() {
                 </div>
                 <div className="col-7">
                     <div className={clsx(styles.mainSite)}>
-                        <div className={clsx(styles.searchBar)}>
-                            <input
-                                type="text"
-                                className={clsx('form-control', styles.searchBar__formControl)}
-                                value={_search}
-                                onChange={handleChangeSearch}
-                            />
-                            <div className={clsx(styles.searchBar__seachIcon)}>
-                                <FontAwesomeIcon icon={faMagnifyingGlass} />
-                            </div>
-                            {_search.length > 0 && (
-                                <div className={clsx(styles.searchBar__clearIcon)}>
-                                    <FontAwesomeIcon icon={faCircleXmark} />
-                                </div>
-                            )}
-                        </div>
-                        {search && (
+                        {_search && (
                             <div className={clsx(styles.search)}>
-                                Search results for <span>"MLB"</span>
+                                Search results for <span>"{_search}"</span>
                             </div>
                         )}
                         <div className={clsx(styles.optionsBar)}>
@@ -133,7 +117,7 @@ function Products() {
                                                 </div>
                                             </div>
                                             <a className={clsx(styles.product__btnBuy)} href="/products/1">
-                                                Buy Now
+                                                Preview
                                             </a>
                                         </div>
                                     </div>

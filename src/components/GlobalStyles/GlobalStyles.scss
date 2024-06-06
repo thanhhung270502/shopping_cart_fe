@@ -69,9 +69,9 @@
     --gray-dark-3: #bdbdbd;
     --gray-light: #f0f0f0;
 
-    --primary: var(--red-2);
-    --primary-dark: var(--red-black);
-    --primary-light: var(--red-light-more);
+    --primary: var(--blue-dark-4);
+    --primary-dark: var(--blue-dark-3);
+    --primary-light: var(--blue-light-2);
     --odd-bg: var(--white);
     --odd-color: var(--black);
     --even-bg: var(--primary-light);
@@ -82,14 +82,14 @@
     --breadcrumbs-color: var(--black);
     --breadcrumbs-color-active: var(--black);
 
-    --nav-bg: var(--primary-light);
+    --nav-bg: var(--white);
     --nav-color: var(--black);
     --nav-resume-color: var(--white);
     --nav-btn-login-color: var(--black);
     --nav-btn-signup-bg: var(--primary);
     --nav-btn-signup-color: var(--white);
 
-    --navbar-bg: var(--blue-light-2);
+    --navbar-bg: var(--primary-light);
     --navbar-color: var(--black);
     --navbar-item-hover-color: var(--primary);
     --navbar-item-2-hover-color: var(--black);
@@ -115,13 +115,16 @@
     --home-option-bg-active: var(--white);
     --home-option-color-active: var(--primary);
     
-    --home-block-star: var(--primary);
-    --home-block-arrivals-title-color: -webkit-linear-gradient(215deg, var(--black) 60%, var(--primary));
-    --home-block-arrivals-title-color-2: var(--primary);
+    --home-block-star: var(--orange-dark);
+    --home-block-arrivals-title-bg: var(--white);
+    --home-block-arrivals-title-color: var(--primary);
+    --home-block-arrivals-title-color-2: var(--orange);
     --home-block-item-bg: var(--white);
+    --home-block-item-color: var(--black);
     --home-block-item-old-price-color: var(--gray-dark);
-    --home-block-item-price-color: var(--black);
+    --home-block-item-price-color: var(--red-2);
     --home-block-item-btn-bg: var(--primary);
+    --home-block-item-btn-bg-2: var(--primary-dark);
     --home-block-item-btn-color: var(--white);
 
     --products-bg: var(--white);
@@ -151,6 +154,11 @@
     --product-btn-add-border: var(--primary);
     --product-btn-add-hover-bg: var(--primary);
     --product-btn-add-hover-color: var(--white);
+    
+    --product-reviews-bg: var(--white);
+    --product-reviews-color: var(--black);
+    --product-reviews-time: var(--gray-dark);
+    --product-reviews-star: var(--orange-dark);
 }
 
 [data-theme='dark'] {

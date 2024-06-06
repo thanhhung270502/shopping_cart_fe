@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import styles from './home.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiamond, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faBoltLightning, faDiamond, faStar, faTruckFast } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 
 function Home() {
@@ -83,21 +83,9 @@ function Home() {
                                 if (option === 'arrivals') {
                                     return (
                                         <div className={clsx(styles.block)}>
-                                            <div className={clsx(styles.title)}>
-                                                <span>
-                                                    <FontAwesomeIcon icon={faDiamond} />
-                                                </span>
-                                                New Arrivals
-                                            </div>
+                                            <div className={clsx(styles.title, styles.title1)}>New Arrivals</div>
                                             <div className={clsx(styles.block__items)}>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -105,32 +93,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -138,32 +125,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -171,32 +157,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -204,32 +189,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -237,32 +221,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -270,22 +253,28 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -294,21 +283,14 @@ function Home() {
                                 } else if (option === 'deals') {
                                     return (
                                         <div className={clsx(styles.block)}>
-                                            <div className={clsx(styles.title)}>
+                                            <div className={clsx(styles.title, styles.title2)}>
                                                 <span>
-                                                    <FontAwesomeIcon icon={faDiamond} />
+                                                    <FontAwesomeIcon icon={faTruckFast} />
                                                 </span>
                                                 Hot Deals
                                             </div>
                                             <div className={clsx(styles.block__items)}>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -316,32 +298,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -349,32 +330,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -382,32 +362,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -415,32 +394,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -448,32 +426,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -481,22 +458,28 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -505,21 +488,14 @@ function Home() {
                                 } else {
                                     return (
                                         <div className={clsx(styles.block)}>
-                                            <div className={clsx(styles.title)}>
+                                            <div className={clsx(styles.title, styles.title3)}>
                                                 <span>
-                                                    <FontAwesomeIcon icon={faDiamond} />
+                                                    <FontAwesomeIcon icon={faBoltLightning} />
                                                 </span>
                                                 Flash Sales
                                             </div>
                                             <div className={clsx(styles.block__items)}>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -527,32 +503,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -560,32 +535,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -593,32 +567,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -626,32 +599,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -659,32 +631,31 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div className={clsx(styles.item, 'col-3')}>
-                                                    <div className={clsx(styles.item__name)}>Lorem Ipsum is simply</div>
-                                                    <div className={clsx(styles.item__reviews)}>
-                                                        <div className={clsx(styles.item__icon)}>
-                                                            <FontAwesomeIcon icon={faStar} />
-                                                        </div>
-                                                        <div className={clsx(styles.text)}>4.8 (511 Review)</div>
-                                                    </div>
+                                                <div className={clsx(styles.item, 'col-2')}>
                                                     <div className={clsx(styles.item__image)}>
                                                         <img
                                                             src="/images/clothes/2-2-2-3.jpg"
@@ -692,22 +663,28 @@ function Home() {
                                                             alt=""
                                                         />
                                                     </div>
-                                                    <div className={clsx(styles.item__prices)}>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__oldPrice)}
-                                                        >
-                                                            $17.25
+                                                    <div className="px-3">
+                                                        <div className={clsx(styles.item__name)}>
+                                                            Lorem Ipsum is simply
                                                         </div>
-                                                        <div
-                                                            className={clsx(styles.item__price, styles.item__newPrice)}
-                                                        >
-                                                            $17.25
+                                                        <div className={clsx(styles.item__prices)}>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__newPrice,
+                                                                )}
+                                                            >
+                                                                $17.25
+                                                            </div>
+                                                            <div
+                                                                className={clsx(
+                                                                    styles.item__price,
+                                                                    styles.item__oldPrice,
+                                                                )}
+                                                            >
+                                                                <span>$17.25</span> -0%
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div className={clsx(styles.item__btn, styles.item__btnBuy)}>
-                                                        <a href="./" className={clsx(styles.item__link)}>
-                                                            Buy Now
-                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
