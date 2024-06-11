@@ -1,16 +1,20 @@
 /* Navbar */
 .nav {
+    // position: fixed;
+    // width: 100%;
+    // z-index: 100;
     // box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .topbar {
     background-color: var(--nav-bg) !important;
+    color: var(--nav-color);
     
     .inner__topbar {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 60px;
+        min-height: 50px;
     }
 
     .topbar__item {
@@ -49,7 +53,7 @@
     .btn {
         text-decoration: none;
         font-weight: bold;
-        padding: 0.5rem 1.5rem;
+        padding: 0.25rem 1.5rem;
         border-radius: 100px;
         border: none;
     }
@@ -166,7 +170,7 @@
     .inner__navbar {
         display: flex;
         align-items: center;
-        height: 100px;
+        min-height: 75px;
     }
 
     .logo {
@@ -199,8 +203,8 @@
 
     .btnCart {
         background-color: transparent;
-        color: var(--nav-btn-signup-bg);
-        font-size: 1.75rem;
+        color: var(--navbar-btnCart-color);
+        font-size: 1.5rem;
         border: none;
         // padding: 0;
     }

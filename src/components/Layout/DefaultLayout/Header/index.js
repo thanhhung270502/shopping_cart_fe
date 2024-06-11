@@ -4,19 +4,12 @@ import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import {
-    faCartShopping,
-    faGear,
-    faMagnifyingGlass,
-    faMoneyBill,
-    faRightFromBracket,
-    faShoppingCart,
-    faUser,
-} from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faGear, faMoneyBill, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
 
 function Header() {
     const [isLight, setIsLight] = useState(true);
     const [text, setText] = useState('');
+    // const [currentUser, setCurrentUser] = useState();
     const [currentUser, setCurrentUser] = useState({
         name: 'Thanh Hung Ly',
         email: 'thanhhung270502@gmail.com',

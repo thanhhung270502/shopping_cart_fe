@@ -6,14 +6,18 @@
 // Color
 :root {
     --black: #000;
-    --black-2: #1b1b1f;
-    --black-3: #182b3a;
+    --black-2: #1f1c1b;
+    --black-3: #3a1f18;
     --black-blue: #202127;
     --black-blue-light: #2e2e32;
     --black-blue-light-2: #2b2f36;
     --black-blue-light-3: #282a36;
     --black-blue-light-4: #3C4147;
     --black-blue-light-5: #2D3037;
+
+    --black-blue-light: #32302e;
+
+    --black-orange-red: #3f0c00;
 
     --white: #ffffff;
     --white-light: #F5F7FA;
@@ -41,9 +45,11 @@
     --purple-2: #bd34fe;
     --purple-3: #51146d;
 
+    --green-dark: #0A4B2D;
     --green-dark-2: #157347;
-    --green-dark: #48bf69;
+    --green-2: #48bf69;
     --green: #50f07d;
+    --green-light: #e6ffed;
 
     --red-black: #3a1818;
     --red-dark: #9D0000;
@@ -59,6 +65,10 @@
     --orange: #f38120;
     --orange-dark: #e57818;
 
+    --orange-red: #eb2b00;
+    --orange-red-dark: #7A1600;
+    --orange-red-light: #FFECE8;
+
     --yellow: #f3eb20;
 
     --pink: #ff3670;
@@ -69,9 +79,14 @@
     --gray-dark-3: #bdbdbd;
     --gray-light: #f0f0f0;
 
-    --primary: var(--blue-dark-4);
-    --primary-dark: var(--blue-dark-3);
-    --primary-light: var(--blue-light-2);
+    --primary: var(--orange-red);
+    --primary-dark: var(--orange-red-dark);
+    --primary-light: var(--orange-red-light);
+
+    --secondary: var(--orange-dark);
+    --primary-dark: var(--orange-red-dark);
+    --primary-light: var(--orange-red-light);
+
     --odd-bg: var(--white);
     --odd-color: var(--black);
     --even-bg: var(--primary-light);
@@ -94,6 +109,7 @@
     --navbar-item-hover-color: var(--primary);
     --navbar-item-2-hover-color: var(--black);
     --navbar-logo-color: var(--primary);
+    --navbar-btnCart-color: var(--primary);
     --navbar-user-name: var(--primary);
     --navbar-user-text: var(--black);
     --navbar-darkmode-bg: var(--primary-light);
@@ -159,25 +175,146 @@
     --product-reviews-color: var(--black);
     --product-reviews-time: var(--gray-dark);
     --product-reviews-star: var(--orange-dark);
+
+    --shop-header-bg: var(--white);
+    --shop-header-color: var(--black);
+    --shop-header-brand-bg: var(--primary-light);
+    --shop-header-time: var(--gray-dark);
+    --shop-header-btn-bg: var(--primary);
+    --shop-header-btn-bg2: var(--secondary);
+    --shop-header-btn-color: var(--white);
+    --shop-text-nor: var(--black);
+    --shop-text-primary: var(--primary);
+    --shop-optionsBar-color: var(--black);
+    --shop-optionsBar-color-active: var(--primary);
+
+    --shop-body-bg: var(--primary-light);
+    --shop-body-color: var(--black);
+    --shop-body-vouchers-bg: var(--white);
+    --shop-body-vouchers-block-bg: var(--primary-light);
+    --shop-body-vouchers-block-border: var(--primary);
+    --shop-body-vouchers-block-color: var(--primary);
+    --shop-body-vouchers-block-btn-bg: var(--primary);
+    --shop-body-vouchers-block-btn-bg2: var(--secondary);
+    --shop-body-vouchers-block-btn-color: var(--white);
 }
 
 [data-theme='dark'] {
-    --primary: var(--red-2);
-    --primary-dark: var(--red-black);
-    --primary-light: var(--red-light-more);
-    --odd-bg: var(--black-2);
-    --odd-color: var(--white);
-    --even-bg: var(--black-blue-light-2);
-    --even-color: var(--white);
-    --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--pink) 30%, var(--purple-2));
+    // --primary: var(--red-2);
+    // --primary-dark: var(--red-black);
+    // --primary-light: var(--red-light-more);
+    // --odd-bg: var(--black-2);
+    // --odd-color: var(--white);
+    // --even-bg: var(--black-blue-light-2);
+    // --even-color: var(--white);
+    // --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--pink) 30%, var(--purple-2));
 
-    --nav-bg: var(--blue-dark-3);
+    // --nav-bg: var(--blue-dark-3);
+    // --nav-color: var(--white);
+    // --nav-btn-login-color: var(--white);
+    // --nav-btn-signup-bg: var(--pink);
+    // --nav-btn-signup-color: var(--white);
+
+    // --border-color: var(--white);
+
+    --primary: var(--orange-red);
+    --primary-dark: var(--orange-red-dark);
+    --primary-light: var(--orange-red-light);
+    --odd-bg: var(--black-orange-red);
+    --odd-color: var(--white);
+    --even-bg: var(--primary-dark);
+    --even-color: var(--white);
+    --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: -webkit-linear-gradient(135deg, var(--primary-dark), var(--primary));
+
+    --breadcrumbs-color: var(--black);
+    --breadcrumbs-color-active: var(--black);
+
+    --nav-bg: var(--black-orange-red);
     --nav-color: var(--white);
+    --nav-resume-color: var(--white);
     --nav-btn-login-color: var(--white);
-    --nav-btn-signup-bg: var(--pink);
+    --nav-btn-signup-bg: var(--primary);
     --nav-btn-signup-color: var(--white);
 
-    --border-color: var(--white);
+    --navbar-bg: var(--primary);
+    --navbar-color: var(--white);
+    --navbar-item-hover-color: var(--primary);
+    --navbar-item-2-hover-color: var(--white);
+    --navbar-logo-color: var(--white);
+    --navbar-btnCart-color: var(--white);
+    --navbar-user-name: var(--primary);
+    --navbar-user-text: var(--black);
+    --navbar-darkmode-bg: var(--primary-light);
+    --navbar-darkmode-color: var(--black);
+    --navbar-darkmode-active-bg: var(--primary);
+    --navbar-darkmode-active-color: var(--white);
+
+    --footer-primary-color: var(--primary);
+
+    --border-color: var(--white-dark);
+
+    --home-bg: var(--primary-light);
+    --home-color: var(--black);
+    --home-btn-bg: var(--primary);
+    --home-btn-color: var(--white);
+    --home-options-bg: var(--primary);
+    --home-option-bg: var(--white);
+    --home-option-color: var(--white);
+    --home-option-bg-active: var(--white);
+    --home-option-color-active: var(--primary);
+    
+    --home-block-star: var(--orange-dark);
+    --home-block-arrivals-title-bg: var(--white);
+    --home-block-arrivals-title-color: var(--primary);
+    --home-block-arrivals-title-color-2: var(--orange);
+    --home-block-item-bg: var(--white);
+    --home-block-item-color: var(--black);
+    --home-block-item-old-price-color: var(--gray-dark);
+    --home-block-item-price-color: var(--red-2);
+    --home-block-item-btn-bg: var(--primary);
+    --home-block-item-btn-bg-2: var(--primary-dark);
+    --home-block-item-btn-color: var(--white);
+
+    --products-bg: var(--white);
+    --products-color: var(--black);
+    --products-block-border: var(--gray-light);
+    --products-block-border-active: var(--primary);
+    --products-search-color: var(--gray-dark-2);
+    --products-search-text: var(--black);
+    --products-product-name: var(--primary);
+    --products-product-old-price-color: var(--gray-dark);
+    --products-product-price-color: var(--black);
+    --products-product-btn-bg: var(--primary);
+    --products-preview-size-bg: var(--gray-light);
+    --products-preview-size-color: var(--black);
+    --products-preview-size-border: var(--gray-light);
+    --products-preview-size-border-active: var(--primary);
+
+    --product-bg: var(--white);
+    --product-color: var(--black);
+    --product-border: var(--gray-light);
+    --product-bonus-bg: var(--primary);
+    --product-bonus-color: var(--white);
+    --product-quantity-bg: var(--white-light);
+    --product-quantity-color: var(--gray-dark);
+    --product-quantity-num-color: var(--black);
+    --product-btn-add: -webkit-linear-gradient(315deg, var(--black-3) 0%, var(--primary) 74%);
+    --product-btn-add-border: var(--primary);
+    --product-btn-add-hover-bg: var(--primary);
+    --product-btn-add-hover-color: var(--white);
+    
+    --product-reviews-bg: var(--white);
+    --product-reviews-color: var(--black);
+    --product-reviews-time: var(--gray-dark);
+    --product-reviews-star: var(--orange-dark);
+
+    --shop-header-bg: var(--white);
+    --shop-header-color: var(--black);
+    --shop-header-brand-bg: var(--primary-light);
+    --shop-header-time: var(--gray-dark);
+    --shop-header-btn-bg: var(--primary);
+    --shop-header-btn-color: var(--white);
 
     
 }
