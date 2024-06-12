@@ -17,7 +17,7 @@
 
     --black-blue-light: #32302e;
 
-    --black-orange-red: #3f0c00;
+    --black-orange-red: #241f1f;
 
     --white: #ffffff;
     --white-light: #F5F7FA;
@@ -66,7 +66,7 @@
     --orange-dark: #e57818;
 
     --orange-red: #eb2b00;
-    --orange-red-dark: #7A1600;
+    --orange-red-dark: #252322;
     --orange-red-light: #FFECE8;
 
     --yellow: #f3eb20;
@@ -120,6 +120,18 @@
     --footer-primary-color: var(--primary);
 
     --border-color: var(--white-dark);
+
+    // ------------ LOGIN ------------ //
+    --login-bg: var(--white-light);
+    --login-inner-bg: var(--white);
+    --login-left-bg: var(--white);
+    --login-right-bg: var(--primary);
+    --login-right-color: var(--white);
+    --login-left-logo: var(--primary);
+    --login-left-border: var(--white-dark);
+    --login-left-fb-bg: var(--blue-dark-4);
+    --login-left-btn-bg: var(--primary);
+    --login-left-btn-color: var(--white);
 
     --home-bg: var(--primary-light);
     --home-color: var(--black);
@@ -220,9 +232,9 @@
     --primary: var(--orange-red);
     --primary-dark: var(--orange-red-dark);
     --primary-light: var(--orange-red-light);
-    --odd-bg: var(--black-orange-red);
+    --odd-bg: var(--primary-dark);
     --odd-color: var(--white);
-    --even-bg: var(--primary-dark);
+    --even-bg: var(--black-2);
     --even-color: var(--white);
     --vp-home-hero-name-color: transparent;
     --vp-home-hero-name-background: -webkit-linear-gradient(135deg, var(--primary-dark), var(--primary));
@@ -230,7 +242,7 @@
     --breadcrumbs-color: var(--black);
     --breadcrumbs-color-active: var(--black);
 
-    --nav-bg: var(--black-orange-red);
+    --nav-bg: var(--primary-dark);
     --nav-color: var(--white);
     --nav-resume-color: var(--white);
     --nav-btn-login-color: var(--white);
@@ -331,6 +343,10 @@ html {
 
 body {
     font-family: "Inter", sans-serif;
+}
+
+.textCenter {
+    text-align: center;
 }
 
 .textBold {

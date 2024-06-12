@@ -178,7 +178,7 @@ function Header() {
                 <div className="container">
                     <div className={clsx(styles.inner__navbar)}>
                         <a href="/" className={clsx(styles.logo)}>
-                            PolkaDots
+                            HoLuon
                         </a>
                         <div className={clsx(styles.midBar)}>
                             <div className={clsx(styles.searchBar)}>
