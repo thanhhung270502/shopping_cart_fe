@@ -46,12 +46,12 @@ function Signup() {
                             </div>
                             <div className="form-floating mb-3">
                                 <input
-                                    type="email"
+                                    type="text"
                                     className="form-control"
                                     id="floatingInput"
                                     placeholder="name@example.com"
                                 />
-                                <label for="floatingInput">Email address</label>
+                                <label for="floatingInput">Phone Number</label>
                             </div>
                             <div className="form-floating mb-3">
                                 <input

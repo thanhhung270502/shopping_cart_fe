@@ -36,12 +36,12 @@ function Login() {
                             <div className={clsx(styles.divider)}>----------or continue with email----------</div>
                             <div className="form-floating mb-3 mt-2">
                                 <input
-                                    type="email"
+                                    type="text"
                                     className="form-control"
                                     id="floatingInput"
                                     placeholder="name@example.com"
                                 />
-                                <label for="floatingInput">Email address</label>
+                                <label for="floatingInput">Phone Number</label>
                             </div>
                             <div className="form-floating">
                                 <input

@@ -1,5 +1,5 @@
 // Layouts
-import { OnlyHeader } from '~/components/Layout';
+import { OnlyHeader, OnlyFooter } from '~/components/Layout';
 
 // Pages
 import Home from '~/pages/Home';
@@ -28,11 +28,13 @@ const publicRoutes = [
     {
         path: '/login',
         component: Login,
+        layout: OnlyFooter,
     },
     // http://localhost:3000/signup
     {
         path: '/signup',
         component: Signup,
+        layout: OnlyFooter,
     },
     // http://localhost:3000/shops/:short_name
     {
