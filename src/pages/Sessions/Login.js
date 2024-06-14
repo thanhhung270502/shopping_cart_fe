@@ -2,8 +2,55 @@ import clsx from 'clsx';
 import styles from './session.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faGoogle } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
+import { login } from '~/api/users';
 
 function Login() {
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [password, setPassword] = useState('');
+    const [remember, setRemember] = useState(false);
+    const [val, setVal] = useState(false);
+
+    const Checkbox = (props) => {
+        return (
+            <div className="form-check mt-3">
+                <input
+                    className="form-check-input"
+                    type="checkbox"
+                    name={props.name}
+                    checked={props.val}
+                    onChange={() => {
+                        props.setValue(!props.val);
+                    }}
+                />
+                <label className="form-check-label" for="flexCheckDefault">
+                    Remember me
+                </label>
+            </div>
+        );
+    };
+
+    const handleSubmit = async () => {
+        // console.log(phoneNumber, password, val);
+        const res = await login({
+            phone_number: phoneNumber,
+            password,
+        });
+
+        console.log(res);
+
+        if (res.code === 400) {
+            // setErrorLogin('Incorrect password or User is not existed');
+        } else if (res.code === 201) {
+            var session = {
+                accessToken: res.body.accessToken,
+                user: res.body.user,
+            };
+            localStorage.setItem('session', JSON.stringify(session));
+            window.location.href = '../';
+        }
+    };
+
     return (
         <div className={clsx(styles.session, styles.login)}>
             <div className="container">
@@ -40,6 +87,8 @@ function Login() {
                                     className="form-control"
                                     id="floatingInput"
                                     placeholder="name@example.com"
+                                    value={phoneNumber}
+                                    onChange={(event) => setPhoneNumber(event.target.value)}
                                 />
                                 <label for="floatingInput">Phone Number</label>
                             </div>
@@ -49,16 +98,15 @@ function Login() {
                                     className="form-control"
                                     id="floatingPassword"
                                     placeholder="Password"
+                                    value={password}
+                                    onChange={(event) => setPassword(event.target.value)}
                                 />
                                 <label for="floatingPassword">Password</label>
                             </div>
-                            <div className="form-check mt-3">
-                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label className="form-check-label" for="flexCheckDefault">
-                                    Remember me
-                                </label>
+                            <Checkbox value={val} setValue={setVal}></Checkbox>
+                            <div className={clsx(styles.btn, styles.btnSubmit)} onClick={handleSubmit}>
+                                Log In
                             </div>
-                            <div className={clsx(styles.btn, styles.btnSubmit)}>Log In</div>
                             <div className={clsx('pt-3 textCenter')}>
                                 Don't have an account?{' '}
                                 <a href="/signup" className={clsx(styles.link)}>

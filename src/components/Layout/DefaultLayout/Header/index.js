@@ -5,16 +5,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faCartShopping, faGear, faMoneyBill, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
+import { checkAuth } from '~/api/users';
 
 function Header() {
     const [isLight, setIsLight] = useState(true);
     const [text, setText] = useState('');
-    // const [currentUser, setCurrentUser] = useState();
-    const [currentUser, setCurrentUser] = useState({
-        name: 'Thanh Hung Ly',
-        email: 'thanhhung270502@gmail.com',
-        avatar: 'https://static-images.vnncdn.net/files/publish/2024/3/25/sao-nu-hoang-nuoc-mat-giau-co-doc-than-o-tuoi-32-687.jpg?width=0&s=_pfLlDsYwXWnxKtF9rde8w',
-    });
+    const [currentUser, setCurrentUser] = useState();
+    // const [currentUser, setCurrentUser] = useState({
+    //     name: 'Thanh Hung Ly',
+    //     email: 'thanhhung270502@gmail.com',
+    //     avatar: 'https://static-images.vnncdn.net/files/publish/2024/3/25/sao-nu-hoang-nuoc-mat-giau-co-doc-than-o-tuoi-32-687.jpg?width=0&s=_pfLlDsYwXWnxKtF9rde8w',
+    // });
 
     const handleChangeDarkMode = () => {
         var currentTheme = localStorage.getItem('theme');
@@ -33,12 +34,42 @@ function Header() {
         setText(event.target.value);
     };
 
+    const handleLogout = () => {
+        localStorage.setItem('session', '');
+        window.location.href = '/';
+    };
+
     useEffect(() => {
         const savedCheckedState = localStorage.getItem('theme');
         if (savedCheckedState && savedCheckedState === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
             setIsLight(false);
         }
+    }, []);
+
+    useEffect(() => {
+        (async () => {
+            var session = localStorage.getItem('session');
+            if (session) {
+                session = JSON.parse(session);
+                const authen = await checkAuth(session.accessToken);
+                if (authen.login === true) {
+                    setCurrentUser(session.user);
+                }
+            } else {
+                // const userGoogle = await getUserGoogle();
+                // console.log(userGoogle);
+                // if (userGoogle.code === 200) {
+                //     session = {
+                //         accessToken: userGoogle.body.body.accessToken,
+                //         user: userGoogle.body.body.user,
+                //     };
+                //     localStorage.setItem('session', JSON.stringify(session));
+                //     await logoutGoogle();
+                //     window.location.href = '../';
+                // }
+            }
+        })();
     }, []);
 
     return (
@@ -61,10 +92,10 @@ function Header() {
                         </div>
                         {!currentUser && (
                             <div className={clsx('d-flex', 'align-items-center')}>
-                                <a className={clsx(styles.btn, styles.btnLogin)} href="./">
+                                <a className={clsx(styles.btn, styles.btnLogin)} href="/login">
                                     Login
                                 </a>
-                                <a className={clsx(styles.btn, styles.btnSignup)} href="./">
+                                <a className={clsx(styles.btn, styles.btnSignup)} href="/signup">
                                     Signup
                                 </a>
                             </div>
@@ -160,12 +191,15 @@ function Header() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className={clsx('dropdown-item', styles.dropdownItem)} href="./">
+                                            <div
+                                                className={clsx('dropdown-item', styles.dropdownItem)}
+                                                onClick={handleLogout}
+                                            >
                                                 <div className={clsx(styles.dropdownItem__icon)}>
                                                     <FontAwesomeIcon icon={faRightFromBracket} />
                                                 </div>
                                                 <div className={clsx(styles.dropdownItem__text)}>Logout</div>
-                                            </a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
