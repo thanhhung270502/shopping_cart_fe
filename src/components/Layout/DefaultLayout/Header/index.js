@@ -122,7 +122,7 @@ function Header() {
                                                     />
                                                 </div>
                                                 <div className={clsx(styles.dropdownItem__info)}>
-                                                    <a className={clsx(styles.dropdownItem__name)} href="./">
+                                                    <a className={clsx(styles.dropdownItem__name)} href={`/users/edit`}>
                                                         {currentUser.name}
                                                     </a>
                                                     <div className={clsx(styles.dropdownItem__email)}>
@@ -183,7 +183,10 @@ function Header() {
                                             </a>
                                         </li>
                                         <li>
-                                            <a className={clsx('dropdown-item', styles.dropdownItem)} href="./">
+                                            <a
+                                                className={clsx('dropdown-item', styles.dropdownItem)}
+                                                href={`/users/edit`}
+                                            >
                                                 <div className={clsx(styles.dropdownItem__icon)}>
                                                     <FontAwesomeIcon icon={faGear} />
                                                 </div>

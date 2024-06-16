@@ -87,6 +87,8 @@
     --primary-dark: var(--orange-red-dark);
     --primary-light: var(--orange-red-light);
 
+    --input-bg: var(--white);
+
     --odd-bg: var(--white);
     --odd-color: var(--black);
     --even-bg: var(--primary);
@@ -155,6 +157,21 @@
     --home-block-item-btn-bg: var(--primary);
     --home-block-item-btn-bg-2: var(--primary-dark);
     --home-block-item-btn-color: var(--white);
+
+    --setting-bg: var(--white-light);
+    --setting-color: var(--black);
+    --setting-border: var(--white-dark);
+    --setting-sideBar-item-active-bg: var(--white);
+    --setting-sideBar-item-active-color: var(--primary);
+    
+    --editProfile-color-primary: var(--primary);
+    --editProfile-border-color: var(--white-dark);
+    --editProfile-time-color: var(--gray-dark-2);
+    --editProfile-btn-bg: var(--primary);
+    --editProfile-btn-color: var(--white);
+    --editProfile-btn-border: var(--white-light);
+    --editProfile-btn-outline-border: var(--primary);
+    --editProfile-btn-outline-color: var(--primary);
 
     --products-bg: var(--white);
     --products-color: var(--black);
@@ -417,4 +434,42 @@ a {
     object-fit: cover;
     object-position: center;
     aspect-ratio: 1/1;
+}
+
+// Datetime Picker
+.react-datetime-picker,
+.react-time-picker {
+    width: 100%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.react-datetime-picker__wrapper,
+.react-time-picker__wrapper {
+    padding: 0.375rem 0.75rem;
+    // border: none !important;
+    background-color: var(--input-bg);
+    border: 1px solid var(--white-dark) !important;
+    border-radius: 0.375rem;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+    abbr {
+        text-decoration: none !important;
+    }
+}
+
+.react-calendar__navigation {
+    padding-top: 1.5rem;
+    height: 100%;
+}
+
+.react-calendar {
+    border: 1px solid var(--white-dark) !important;
+}
+
+.react-datetime-picker__inputGroup__input,
+.react-time-picker__inputGroup__input {
+    &:focus-visible {
+        outline: none !important;
+    }
 }

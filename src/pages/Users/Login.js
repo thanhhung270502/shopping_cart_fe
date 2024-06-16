@@ -8,7 +8,6 @@ import { login } from '~/api/users';
 function Login() {
     const [phoneNumber, setPhoneNumber] = useState('');
     const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false);
     const [val, setVal] = useState(false);
 
     const Checkbox = (props) => {

@@ -5,12 +5,14 @@ import { OnlyHeader, OnlyFooter } from '~/components/Layout';
 import Home from '~/pages/Home';
 import Product from '~/pages/Product';
 import Products from '~/pages/Products';
-import Login from '~/pages/Sessions/Login';
-import Signup from '~/pages/Sessions/Signup';
+import Login from '~/pages/Users/Login';
+import Signup from '~/pages/Users/Signup';
 import Shop from '~/pages/Shop';
 // import Product_Index from '~/pages/Product_Index';
 import Test from '~/pages/Test';
 import Upload from '~/pages/Upload';
+import EditProfile from '~/pages/Users/EditProfile';
+import EditPhoneNumber from '~/pages/Users/EditPhoneNumber';
 
 // Không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -35,6 +37,16 @@ const publicRoutes = [
         path: '/signup',
         component: Signup,
         layout: OnlyFooter,
+    },
+    // http://localhost:3000/users/edit/phone
+    {
+        path: '/users/edit/phone',
+        component: EditPhoneNumber,
+    },
+    // http://localhost:3000/users/edit
+    {
+        path: '/users/edit',
+        component: EditProfile,
     },
     // http://localhost:3000/shops/:short_name
     {
