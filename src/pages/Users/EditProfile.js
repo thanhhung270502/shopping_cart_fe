@@ -13,32 +13,59 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from 'react';
-import { checkAuth } from '~/api/users';
+import { checkAuth, getAvatar, updateProfile } from '~/api/users';
 import DateTimePicker from 'react-datetime-picker';
 import 'react-datetime-picker/dist/DateTimePicker.css';
+import 'react-datepicker/dist/react-datepicker.css';
 import 'react-calendar/dist/Calendar.css';
 import 'react-clock/dist/Clock.css';
+import DatePicker from 'react-datepicker';
 
 const { default: SettingComponent } = require('~/components/Setting');
 
 const MainChild = () => {
     const [currentUser, setCurrentUser] = useState();
-    const [imgSrc, setImgSrc] = useState('/images/kim.png');
+    const [imgSrc, setImgSrc] = useState('/images/avatar_default.png');
     const [name, setName] = useState('');
     const [gender, setGender] = useState('male');
     const [birth, setBirth] = useState();
 
     const handleChangeImageByUpload = (event) => {
         let file = event.target.files[0];
-        setImgSrc(URL.createObjectURL(file));
+        // setImgSrc(URL.createObjectURL(file));
         let reader = new FileReader();
 
         reader.onload = () => {
             let base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
-            console.log(base64String);
+            console.log(reader.result);
+            // let url = 'data:image/png;base64, ' + base64String;
+            setImgSrc(reader.result);
         };
 
         reader.readAsDataURL(file);
+    };
+
+    const handleSubmit = async () => {
+        const response = await updateProfile({
+            id: currentUser.id,
+            name,
+            gender,
+            date_birth: birth,
+            avatar: imgSrc,
+        });
+
+        if (response.code === 200) {
+            var session = localStorage.getItem('session');
+            if (session) {
+                session = JSON.parse(session);
+                session['user']['name'] = name;
+                session['user']['gender'] = gender;
+                session['user']['date_birth'] = birth;
+                // console.log(session);
+                localStorage.setItem('session', JSON.stringify(session));
+            }
+            window.location.href = '/';
+        }
     };
 
     useEffect(() => {
@@ -50,6 +77,14 @@ const MainChild = () => {
                 if (authen.login === true) {
                     setCurrentUser(session.user);
                     setName(session.user.name);
+                    setBirth(session.user.date_birth);
+                    setGender(session.user.gender);
+
+                    const avatar = await getAvatar({ id: session.user.id });
+                    let imageData = avatar.body;
+                    const str = imageData.data.map((byte) => String.fromCharCode(byte)).join('');
+                    console.log('String:', str);
+                    setImgSrc(str);
                 }
             } else {
                 // const userGoogle = await getUserGoogle();
@@ -83,6 +118,7 @@ const MainChild = () => {
                     </div>
                     <div
                         className={clsx(styles.editProfile__header__btn, styles.editProfile__header__btn_full, 'ms-2')}
+                        onClick={handleSubmit}
                     >
                         Save
                     </div>
@@ -109,18 +145,6 @@ const MainChild = () => {
                                         id="inputGroupFile01"
                                         onChange={handleChangeImageByUpload}
                                     />
-                                </div>
-                                <div className="input-group mb-3">
-                                    <input
-                                        type="text"
-                                        className="form-control"
-                                        placeholder="Image URL"
-                                        aria-label="Recipient's username"
-                                        aria-describedby="button-addon2"
-                                    />
-                                    <button className="btn btn-outline-danger" type="button" id="button-addon2">
-                                        Preview
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -165,7 +189,7 @@ const MainChild = () => {
                                 <label for="exampleFormControlInput1" className={clsx('form-label', styles.formLabel)}>
                                     Birth
                                 </label>
-                                <DateTimePicker onChange={setBirth} value={birth} />
+                                <DatePicker onChange={(date) => setBirth(date)} selected={birth} />
                             </div>
                         </div>
                     </div>
@@ -187,7 +211,9 @@ const MainChild = () => {
                                     <div>Phone Number:</div>
                                     <div>{currentUser && currentUser.phone_number}</div>
                                 </div>
-                                <div className={clsx(styles.block__body__btn)}>Update</div>
+                                <a href="/users/edit/phone" className={clsx(styles.block__body__btn)}>
+                                    Update
+                                </a>
                             </div>
                             <div className="d-flex align-items-center">
                                 <div className={clsx(styles.block__body__icon)}>
@@ -197,7 +223,9 @@ const MainChild = () => {
                                     <div>Email:</div>
                                     <div>{currentUser ? currentUser.email : '...'}</div>
                                 </div>
-                                <div className={clsx(styles.block__body__btn)}>Update</div>
+                                <a href="/users/edit/email" className={clsx(styles.block__body__btn)}>
+                                    Update
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -216,7 +244,9 @@ const MainChild = () => {
                                 <div className={clsx(styles.block__body__text)}>
                                     <div>Change password</div>
                                 </div>
-                                <div className={clsx(styles.block__body__btn)}>Update</div>
+                                <a href="/users/edit/password" className={clsx(styles.block__body__btn)}>
+                                    Update
+                                </a>
                             </div>
                             <div className="d-flex align-items-center mb-4">
                                 <div className={clsx(styles.block__body__icon)}>

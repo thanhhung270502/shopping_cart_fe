@@ -5,12 +5,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-regular-svg-icons';
 import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faCartShopping, faGear, faMoneyBill, faRightFromBracket, faUser } from '@fortawesome/free-solid-svg-icons';
-import { checkAuth } from '~/api/users';
+import { checkAuth, getAvatar } from '~/api/users';
 
 function Header() {
     const [isLight, setIsLight] = useState(true);
     const [text, setText] = useState('');
     const [currentUser, setCurrentUser] = useState();
+    const [avatar, setAvatar] = useState();
     // const [currentUser, setCurrentUser] = useState({
     //     name: 'Thanh Hung Ly',
     //     email: 'thanhhung270502@gmail.com',
@@ -39,6 +40,13 @@ function Header() {
         window.location.href = '/';
     };
 
+    const getAvatarUrl = () => {
+        let imageData = currentUser.avatar;
+        const str = imageData.data.map((byte) => String.fromCharCode(byte)).join('');
+        console.log(str);
+        return str;
+    };
+
     useEffect(() => {
         const savedCheckedState = localStorage.getItem('theme');
         if (savedCheckedState && savedCheckedState === 'dark') {
@@ -54,6 +62,11 @@ function Header() {
                 session = JSON.parse(session);
                 const authen = await checkAuth(session.accessToken);
                 if (authen.login === true) {
+                    const avatar = await getAvatar({ id: session.user.id });
+                    session['avatar'] = avatar.body;
+                    let imageData = session.avatar;
+                    const str = imageData.data.map((byte) => String.fromCharCode(byte)).join('');
+                    setAvatar(str);
                     setCurrentUser(session.user);
                 }
             } else {
@@ -115,11 +128,7 @@ function Header() {
                                         <li>
                                             <div className={clsx(styles.dropdownItem)} href="./">
                                                 <div className={clsx(styles.dropdownItem__image)}>
-                                                    <img
-                                                        src={currentUser.avatar}
-                                                        alt="avatar"
-                                                        className={clsx('img-fluid')}
-                                                    />
+                                                    <img src={avatar} alt="avatar" className={clsx('img-fluid')} />
                                                 </div>
                                                 <div className={clsx(styles.dropdownItem__info)}>
                                                     <a className={clsx(styles.dropdownItem__name)} href={`/users/edit`}>

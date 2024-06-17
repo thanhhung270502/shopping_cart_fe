@@ -1,0 +1,45 @@
+.update {
+    padding: 2rem;
+}
+
+.update__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.update__body {
+    width: 500px;
+    margin: auto;
+    border: 2px solid var(--update-border);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.update__btn {
+    background-color: var(--update-btn-bg);
+    color: var(--update-btn-color);
+    text-align: center;
+    padding: 0.35rem 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.update__btn__back {
+    background-color: var(--update-btn-2-bg);
+    color: var(--update-btn-2-color);
+    text-align: center;
+    padding: 0.35rem 0;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.formLabel {
+    font-size: 0.9rem;
+}
+
+.formControl {
+
+}

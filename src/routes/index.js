@@ -13,6 +13,8 @@ import Test from '~/pages/Test';
 import Upload from '~/pages/Upload';
 import EditProfile from '~/pages/Users/EditProfile';
 import EditPhoneNumber from '~/pages/Users/EditPhoneNumber';
+import EditEmail from '~/pages/Users/EditEmail';
+import UpdatePassword from '~/pages/Users/UpdatePassword';
 
 // Không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -42,6 +44,16 @@ const publicRoutes = [
     {
         path: '/users/edit/phone',
         component: EditPhoneNumber,
+    },
+    // http://localhost:3000/users/edit/email
+    {
+        path: '/users/edit/email',
+        component: EditEmail,
+    },
+    // http://localhost:3000/users/edit/password
+    {
+        path: '/users/edit/password',
+        component: UpdatePassword,
     },
     // http://localhost:3000/users/edit
     {
