@@ -131,7 +131,10 @@ function Header() {
                                                     <img src={avatar} alt="avatar" className={clsx('img-fluid')} />
                                                 </div>
                                                 <div className={clsx(styles.dropdownItem__info)}>
-                                                    <a className={clsx(styles.dropdownItem__name)} href={`/users/edit`}>
+                                                    <a
+                                                        className={clsx(styles.dropdownItem__name)}
+                                                        href={`/customer/edit`}
+                                                    >
                                                         {currentUser.name}
                                                     </a>
                                                     <div className={clsx(styles.dropdownItem__email)}>
@@ -194,7 +197,7 @@ function Header() {
                                         <li>
                                             <a
                                                 className={clsx('dropdown-item', styles.dropdownItem)}
-                                                href={`/users/edit`}
+                                                href={`/customer/edit`}
                                             >
                                                 <div className={clsx(styles.dropdownItem__icon)}>
                                                     <FontAwesomeIcon icon={faGear} />

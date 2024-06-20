@@ -3,6 +3,7 @@ import styles from './setting.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot, faMoneyBill, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faFirstOrder } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
 
 function SettingComponent({ state, mainChild }) {
     return (
@@ -13,32 +14,34 @@ function SettingComponent({ state, mainChild }) {
                         <div className={clsx(styles.sideBar__title)}>Settings</div>
                         <div className={clsx(styles.sideBar__subTitle)}>General Settings</div>
                         <div className={clsx(styles.sideBar__options)}>
-                            <div
+                            <Link
                                 className={clsx(
                                     styles.sideBar__item,
                                     `${state === 'edit_profile' && styles.sideBar__item_active}`,
                                 )}
+                                to="/customer/edit"
                             >
                                 <div className={clsx(styles.sideBar__icon)}>
                                     <FontAwesomeIcon icon={faUser} />
                                 </div>
                                 <div className={clsx(styles.sideBar__name)}>Profile</div>
-                            </div>
-                            <div
+                            </Link>
+                            <Link
                                 className={clsx(
                                     styles.sideBar__item,
                                     `${state === 'address' && styles.sideBar__item_active}`,
                                 )}
+                                to="/customer/address"
                             >
                                 <div className={clsx(styles.sideBar__icon)}>
                                     <FontAwesomeIcon icon={faLocationDot} />
                                 </div>
                                 <div className={clsx(styles.sideBar__name)}>Address</div>
-                            </div>
+                            </Link>
                         </div>
                         <div className={clsx(styles.sideBar__subTitle)}>Order Settings</div>
                         <div className={clsx(styles.sideBar__options)}>
-                            <div
+                            <Link
                                 className={clsx(
                                     styles.sideBar__item,
                                     `${state === 'orders' && styles.sideBar__item_active}`,
@@ -48,8 +51,8 @@ function SettingComponent({ state, mainChild }) {
                                     <FontAwesomeIcon icon={faFirstOrder} />
                                 </div>
                                 <div className={clsx(styles.sideBar__name)}>Order Management</div>
-                            </div>
-                            <div
+                            </Link>
+                            <Link
                                 className={clsx(
                                     styles.sideBar__item,
                                     `${state === 'bill' && styles.sideBar__item_active}`,
@@ -59,7 +62,7 @@ function SettingComponent({ state, mainChild }) {
                                     <FontAwesomeIcon icon={faMoneyBill} />
                                 </div>
                                 <div className={clsx(styles.sideBar__name)}>Billing</div>
-                            </div>
+                            </Link>
                         </div>
                     </div>
                     <div className={clsx(styles.mainChild)}>{mainChild}</div>

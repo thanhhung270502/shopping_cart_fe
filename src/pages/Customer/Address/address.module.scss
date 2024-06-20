@@ -1,0 +1,119 @@
+.address {
+}
+
+.address__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.address__body {
+
+}
+
+.address__block__header {
+    background-color: var(--address-block-bg);
+    border: 1px dotted var(--address-block-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    cursor: pointer;
+    color: var(--address-block-header-color);
+    
+    .address__block__icon {
+        padding-right: 1rem;
+    }
+    
+    .address__block__text {
+    }
+}
+
+
+.address__block {
+    background-color: var(--address-block-bg);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    .info__name {
+        text-transform: uppercase;
+        padding-right: 1rem;
+    }
+
+    .info__default {
+        color: var(--address-block-color-primary);
+        font-size: 0.9rem;
+
+        span {
+            padding-right: 0.35rem;
+        }
+    }
+
+    .info__address {
+        span {
+            color: var(--address-block-span-color);
+        }
+    }
+
+    .info__phone {
+        span {
+            color: var(--address-block-span-color);
+        }
+
+    }
+
+    .address__block__settings {
+        display: flex;
+        align-items: center;
+
+        .setting__item {
+            margin-left: 1rem;
+            cursor: pointer;
+        }
+        
+        .setting__default {
+            color: var(--address-block-btn-default-color);
+        }
+
+        .setting__delete {
+            background-color: var(--address-block-btn-delete-bg);
+            color: var(--address-block-btn-delete-color);
+            padding: 0.5rem 1rem;
+        }
+    }
+}
+
+.createAddress {
+    .createAddress__title {
+        font-weight: bold;
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .formControl {
+        padding: 0.5rem 1rem;
+    }
+
+    .createAddress__btn {
+        color: var(--address-block-btn-delete-color);
+        background-color: var(--address-block-btn-delete-bg);
+        border: 2px solid var(--address-block-btn-default-color);
+        width: fit-content;
+        padding: 0.5rem 2.5rem;
+        border-radius: 100px;
+        cursor: pointer;
+    }
+
+    .createAddress__btnBack {
+        background-color: transparent;
+        color: var(--address-block-btn-default-color);
+        margin-left: 1rem;
+    }
+
+    .formCheckInput {
+        border-radius: 100px;
+    }
+}

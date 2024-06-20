@@ -19,7 +19,7 @@ const MainChild = () => {
                 session['user']['phone_number'] = phone_number;
                 localStorage.setItem('session', JSON.stringify(session));
             }
-            window.location.href = '/users/edit';
+            window.location.href = '/customer/edit';
         }
     };
 
@@ -54,7 +54,7 @@ const MainChild = () => {
                         onChange={(e) => setPhoneNumber(e.target.value)}
                     />
                 </div>
-                <a href="/users/edit">
+                <a href="/customer/edit">
                     <div className={clsx(styles.update__btn__back)}>Back</div>
                 </a>
                 <div className="mt-2 mb-3" onClick={handleSubmit}>

@@ -5,16 +5,19 @@ import { OnlyHeader, OnlyFooter } from '~/components/Layout';
 import Home from '~/pages/Home';
 import Product from '~/pages/Product';
 import Products from '~/pages/Products';
-import Login from '~/pages/Users/Login';
-import Signup from '~/pages/Users/Signup';
+import Login from '~/pages/Customer/Login';
+import Signup from '~/pages/Customer/Signup';
 import Shop from '~/pages/Shop';
 // import Product_Index from '~/pages/Product_Index';
 import Test from '~/pages/Test';
 import Upload from '~/pages/Upload';
-import EditProfile from '~/pages/Users/EditProfile';
-import EditPhoneNumber from '~/pages/Users/EditPhoneNumber';
-import EditEmail from '~/pages/Users/EditEmail';
-import UpdatePassword from '~/pages/Users/UpdatePassword';
+import EditProfile from '~/pages/Customer/EditProfile';
+import EditPhoneNumber from '~/pages/Customer/EditPhoneNumber';
+import EditEmail from '~/pages/Customer/EditEmail';
+import UpdatePassword from '~/pages/Customer/UpdatePassword';
+import Address from '~/pages/Customer/Address/Address';
+import CreateAddress from '~/pages/Customer/Address/CreateAddress';
+import EditAddress from '~/pages/Customer/Address/EditAddress';
 
 // Không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -40,25 +43,40 @@ const publicRoutes = [
         component: Signup,
         layout: OnlyFooter,
     },
-    // http://localhost:3000/users/edit/phone
+    // http://localhost:3000/customer/edit/phone
     {
-        path: '/users/edit/phone',
+        path: '/customer/edit/phone',
         component: EditPhoneNumber,
     },
-    // http://localhost:3000/users/edit/email
+    // http://localhost:3000/customer/edit/email
     {
-        path: '/users/edit/email',
+        path: '/customer/edit/email',
         component: EditEmail,
     },
-    // http://localhost:3000/users/edit/password
+    // http://localhost:3000/customer/edit/password
     {
-        path: '/users/edit/password',
+        path: '/customer/edit/password',
         component: UpdatePassword,
     },
-    // http://localhost:3000/users/edit
+    // http://localhost:3000/customer/edit
     {
-        path: '/users/edit',
+        path: '/customer/edit',
         component: EditProfile,
+    },
+    // http://localhost:3000/customer/address/create
+    {
+        path: '/customer/address/create',
+        component: CreateAddress,
+    },
+    // http://localhost:3000/customer/address/edit
+    {
+        path: '/customer/address/edit/:id',
+        component: EditAddress,
+    },
+    // http://localhost:3000/customer/address
+    {
+        path: '/customer/address',
+        component: Address,
     },
     // http://localhost:3000/shops/:short_name
     {

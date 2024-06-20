@@ -211,7 +211,7 @@ const MainChild = () => {
                                     <div>Phone Number:</div>
                                     <div>{currentUser && currentUser.phone_number}</div>
                                 </div>
-                                <a href="/users/edit/phone" className={clsx(styles.block__body__btn)}>
+                                <a href="/customer/edit/phone" className={clsx(styles.block__body__btn)}>
                                     Update
                                 </a>
                             </div>
@@ -223,7 +223,7 @@ const MainChild = () => {
                                     <div>Email:</div>
                                     <div>{currentUser ? currentUser.email : '...'}</div>
                                 </div>
-                                <a href="/users/edit/email" className={clsx(styles.block__body__btn)}>
+                                <a href="/customer/edit/email" className={clsx(styles.block__body__btn)}>
                                     Update
                                 </a>
                             </div>
@@ -244,7 +244,7 @@ const MainChild = () => {
                                 <div className={clsx(styles.block__body__text)}>
                                     <div>Change password</div>
                                 </div>
-                                <a href="/users/edit/password" className={clsx(styles.block__body__btn)}>
+                                <a href="/customer/edit/password" className={clsx(styles.block__body__btn)}>
                                     Update
                                 </a>
                             </div>

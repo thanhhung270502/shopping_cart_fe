@@ -19,7 +19,7 @@ const MainChild = () => {
         const res = await updatePassword({ id: userID, oldPassword, newPassword });
 
         if (res.code === 200) {
-            window.location.href = '/users/edit';
+            window.location.href = '/customer/edit';
         }
     };
 
@@ -63,7 +63,7 @@ const MainChild = () => {
                         onChange={(e) => setConfirmNewPassword(e.target.value)}
                     />
                 </div>
-                <a href="/users/edit">
+                <a href="/customer/edit">
                     <div className={clsx(styles.update__btn__back)}>Back</div>
                 </a>
                 <div className="mt-2 mb-3">
