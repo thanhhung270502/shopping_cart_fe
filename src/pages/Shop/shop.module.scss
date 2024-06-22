@@ -51,8 +51,8 @@
     }
 
     .btnFollow {
-        background-color: var(--shop-header-btn-bg2);
-        background-image: linear-gradient(120deg, var(--shop-header-btn-bg2) 0%, var(--shop-header-btn-bg) 74%);
+        background-color: var(--shop-header-btn-bg);
+        // background-image: linear-gradient(120deg, var(--shop-header-btn-bg2) 0%, var(--shop-header-btn-bg) 74%);
         color: var(--shop-header-btn-color);
         padding: 0.5rem 1.5rem;
         font-weight: bold;
@@ -159,7 +159,7 @@
 
         .voucher__btn {
             background-color: var(--shop-body-vouchers-block-btn-bg);
-            background-image: linear-gradient(120deg, var(--shop-body-vouchers-block-btn-bg) 0%, var(--shop-body-vouchers-block-btn-bg2) 74%);
+            // background-image: linear-gradient(120deg, var(--shop-body-vouchers-block-btn-bg) 0%, var(--shop-body-vouchers-block-btn-bg2) 74%);
             color: var(--shop-body-vouchers-block-btn-color);
             padding: 0.25rem 1rem;
             font-size: 0.9rem;

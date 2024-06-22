@@ -7,7 +7,7 @@ import Product from '~/pages/Product';
 import Products from '~/pages/Products';
 import Login from '~/pages/Customer/Login';
 import Signup from '~/pages/Customer/Signup';
-import Shop from '~/pages/Shop';
+import Shop from '~/pages/Shop/Shops';
 // import Product_Index from '~/pages/Product_Index';
 import Test from '~/pages/Test';
 import Upload from '~/pages/Upload';
@@ -18,6 +18,10 @@ import UpdatePassword from '~/pages/Customer/UpdatePassword';
 import Address from '~/pages/Customer/Address/Address';
 import CreateAddress from '~/pages/Customer/Address/CreateAddress';
 import EditAddress from '~/pages/Customer/Address/EditAddress';
+import ShopInformation from '~/pages/Seller/CreateShop/ShopInformation';
+import ShopTransportation from '~/pages/Seller/CreateShop/ShopTransportation';
+import ShopComplete from '~/pages/Seller/CreateShop/ShopComplete';
+import ShopDone from '~/pages/Seller/CreateShop/ShopDone';
 
 // Không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -43,6 +47,28 @@ const publicRoutes = [
         component: Signup,
         layout: OnlyFooter,
     },
+
+    // http://localhost:3000/seller/new/information
+    {
+        path: '/seller/new/information',
+        component: ShopInformation,
+    },
+    // http://localhost:3000/seller/new/transportation
+    {
+        path: '/seller/new/transportation',
+        component: ShopTransportation,
+    },
+    // http://localhost:3000/seller/new/complete
+    {
+        path: '/seller/new/complete',
+        component: ShopComplete,
+    },
+    // http://localhost:3000/seller/new/done
+    {
+        path: '/seller/new/done',
+        component: ShopDone,
+    },
+
     // http://localhost:3000/customer/edit/phone
     {
         path: '/customer/edit/phone',
