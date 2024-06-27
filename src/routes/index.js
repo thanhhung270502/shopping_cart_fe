@@ -22,6 +22,7 @@ import ShopInformation from '~/pages/Seller/CreateShop/ShopInformation';
 import ShopTransportation from '~/pages/Seller/CreateShop/ShopTransportation';
 import ShopComplete from '~/pages/Seller/CreateShop/ShopComplete';
 import ShopDone from '~/pages/Seller/CreateShop/ShopDone';
+import EditUIShop from '~/pages/Seller/EditShop/EditUIShop';
 
 // Không cần đăng nhập vẫn vào được
 const publicRoutes = [
@@ -67,6 +68,12 @@ const publicRoutes = [
     {
         path: '/seller/new/done',
         component: ShopDone,
+    },
+
+    // http://localhost:3000/seller/edit/:id
+    {
+        path: '/seller/edit/:id',
+        component: EditUIShop,
     },
 
     // http://localhost:3000/customer/edit/phone

@@ -1,0 +1,196 @@
+.editUIShop {
+    min-height: 100vh;
+}
+
+.editUIShop__header {
+    background-color: var(--shop-header-bg);
+    color: var(--shop-header-color);
+
+    .editUIShop__header__inner {
+        display: flex;
+        padding: 2rem 0 1.5rem;
+    }
+
+    .editUIShop__header__brand {
+        width: 50%;
+        background-color: transparent;
+        color: var(--shop-header-brand-color);
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+        height: 175px;
+    }
+
+    .brand__inner {
+        display: flex;
+        align-items: flex-start;
+        padding: 1.5rem 2rem;
+        height: 175px;
+    }
+
+    .editUIShop__image {
+        width: 125px;
+
+        img {
+            border-radius: 100%;
+        }
+    }
+
+    .editUIShop__info {
+        padding-left: 1.5rem;
+        flex-grow: 1;
+    }
+
+    .editUIShop__name {
+        font-weight: bold;
+        font-size: 1.25rem;
+
+        span {
+            padding-left: 0.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .editUIShop__time_connect {
+        color: var(--shop-header-time);
+        font-size: 0.9rem;
+    }
+
+    .editUIShop__follows {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+    }
+
+    .btnFollow {
+        background-color: var(--shop-header-btn-bg);
+        // background-image: linear-gradient(120deg, var(--shop-header-btn-bg2) 0%, var(--shop-header-btn-bg) 74%);
+        color: var(--shop-header-btn-color);
+        padding: 0.5rem 1.25rem;
+        font-weight: bold;
+        font-size: 0.9rem;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 1rem;
+        margin-top: 1rem;
+
+        span {
+            padding-right: 0.5rem;
+        }
+    }
+
+    .editUIShop__header__img {
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 175px;
+        filter: blur(2px);
+    }
+
+    .editUIShop__header__bg {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        height: 175px;
+        background-color: rgba(0, 0, 0, .25);
+    }
+
+    .editUIShop__header__block {
+        width: 25%;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        .body {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            // justify-content: ;
+        }
+
+        .body__icon {
+            width: 30px;
+        }
+
+        .body__title {
+            padding-right: 0.5rem;
+        }
+
+        .body__quantity {
+            color: var(--shop-text-primary);
+            font-weight: bold;
+        }
+    }
+    
+    .editUIShop__header__optionsBar {
+        display: flex;
+        align-items: center;
+        overflow-x: auto;
+    
+        .option {
+            min-width: 225px;
+            text-align: center;
+            padding: 0.5rem 2rem;
+            cursor: pointer;
+            position: relative;
+            margin-right: 0.5rem;
+            // border-radius: 10px;
+            border-bottom: 2px solid var(--shop-optionsBar-color-active);
+            cursor: pointer;
+
+            &:hover {
+                color: var(--shop-optionsBar-color-active);
+            }
+        }
+
+        .optionPlus {
+            color: var(--shop-optionsBar-color-active);
+            font-weight: bold;
+        }
+    
+        .option_active {
+            color: var(--shop-optionsBar-color-active);
+            border-bottom: 2px solid var(--shop-optionsBar-color-active);
+        }
+
+        .option__delete {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .option__edit {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            font-size: 0.9rem;
+        }
+
+        .optionInput {
+            border: none;
+            padding: 0.25rem 0.75rem;
+        }
+
+        .optionText {
+            padding: 0.25rem 0;
+        }
+    }
+}
+
+.shop__body {
+    background-color: var(--editShopUI-body-bg);
+    color: var(--editShopUI-body-color);
+    padding: 1rem 0;
+}

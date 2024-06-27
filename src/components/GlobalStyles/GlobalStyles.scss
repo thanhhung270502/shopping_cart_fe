@@ -105,13 +105,20 @@
     --nav-btn-login-color: var(--black);
     --nav-btn-signup-bg: var(--primary);
     --nav-btn-signup-color: var(--white);
+    --nav-darkmode-button: var(--primary);
 
     --navbar-bg: var(--primary);
     --navbar-color: var(--white);
+    --navbar-item-hover-bg: var(--primary-light);
     --navbar-item-hover-color: var(--primary);
     --navbar-item-2-hover-color: var(--black);
+    --navbar-item-icon: var(--primary);
     --navbar-logo-color: var(--white);
     --navbar-btnCart-color: var(--white);
+    
+    --navbar-dropdownMenu-bg: var(--white);
+    --navbar-dropdownMenu-color: var(--black);
+
     --navbar-user-name: var(--black);
     --navbar-user-text: var(--black);
     --navbar-darkmode-bg: var(--primary-light);
@@ -231,14 +238,16 @@
 
     --shop-header-bg: var(--white);
     --shop-header-color: var(--black);
-    --shop-header-brand-bg: var(--primary-light);
-    --shop-header-time: var(--gray-dark);
-    --shop-header-btn-bg: var(--primary);
+    --shop-header-brand-bg: var(--primary);
+    --shop-header-brand-color: var(--white);
+    --shop-header-time: var(--white);
+    --shop-header-btn-bg: var(--white);
     --shop-header-btn-bg2: var(--secondary);
-    --shop-header-btn-color: var(--white);
+    --shop-header-btn-color: var(--primary);
     --shop-text-nor: var(--black);
     --shop-text-primary: var(--primary);
-    --shop-optionsBar-color: var(--black);
+    --shop-optionsBar-bg: var(--primary);
+    --shop-optionsBar-color: var(--white);
     --shop-optionsBar-color-active: var(--primary);
 
     --shop-body-bg: var(--primary-light);
@@ -250,6 +259,21 @@
     --shop-body-vouchers-block-btn-bg: var(--primary);
     --shop-body-vouchers-block-btn-bg2: var(--secondary);
     --shop-body-vouchers-block-btn-color: var(--white);
+    --shop-body-section-link: var(--primary);
+    --shop-body-section-bg: var(--white);
+    --shop-body-section-color: var(--black);
+    --shop-body-section-voucher-bg: var(--primary);
+    --shop-body-section-voucher-color: var(--white);
+    --shop-body-section-time-border: var(--primary);
+    --shop-body-section-time-color: var(--primary);
+    --shop-body-section-price-new-color: var(--primary);
+    --shop-body-section-price-old-color: var(--gray-dark);
+    --shop-body-section-price-discount-bg: var(--primary-light);
+    --shop-body-section-price-discount-color: var(--primary);
+    --shop-body-section-star: var(--orange);
+
+    --editShopUI-body-bg: var(--white-light);
+    --editShopUI-body-color: var(--black);
 }
 
 [data-theme='dark'] {
@@ -376,7 +400,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    // transition: all 0.1s ease;
+    transition: all 0.1s ease;
 }
 
 html {
@@ -392,6 +416,10 @@ body {
 
 .textBold {
     font-weight: bold;
+}
+
+li {
+    list-style: none;
 }
 
 a {
@@ -509,4 +537,9 @@ a {
 
 .react-datepicker-wrapper {
     width: 100%;
+}
+
+// ---------------------- EditUIShop ---------------------- //
+.editBorderDotted {
+    border: 2px dotted var(--primary);
 }

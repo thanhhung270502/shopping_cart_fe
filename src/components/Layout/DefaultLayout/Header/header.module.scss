@@ -58,7 +58,12 @@
         border: none;
     }
 
-    .btnUser {
+    // ------------------------ Dropdown ------------------------ //
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdownToggle {
         text-decoration: none;
         font-weight: bold;
         padding: 0.5rem 1.5rem;
@@ -66,23 +71,40 @@
         border: none;
         background-color: transparent;
         color: var(--navbar-item-hover-color);
+        cursor: pointer;
     }
 
     .dropdownMenu {
         width: 350px;
+        position: absolute;
+        background-color: var(--navbar-dropdownMenu-bg);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 0.25rem 0rem;
+        right: 0;
+        // bottom: 0;
+    }
+
+    .dropdownMenuHide {
+        display: none;
     }
 
     .dropdownItem {
         display: flex;
-        align-items: flex-start;
-        padding: 0.5rem 1rem;
+        align-items: center;
+        padding: 0.5rem 1.25rem;
         margin: 0.2rem 0;
         color: var(--navbar-user-text);
         cursor: pointer;
+
+        &:hover {
+            background-color: var(--navbar-item-hover-bg);
+        }
     }
 
     .dropdownItem__icon {
-        width: 30px;
+        width: 35px;
+        color: var(--navbar-item-icon);
     }
 
     .dropdownItem__text {
@@ -90,16 +112,28 @@
     }
 
     .dropdownItem__image {
-        width: 25%;
+        // width: 25%;
+    }
 
-        img {
-            border-radius: 10px;
-        }
+    .dropdownItem__img {
+        width: 80px;
+        object-fit: cover;
+        object-position: center;
+        aspect-ratio: 1/1;
+        border-radius: 1000px;
     }
 
     .dropdownItem__info {
-        width: 75%;
-        padding: 0 0.5rem;
+        // width: 75%;
+        flex-grow: 1;
+        padding: 0 0.75rem;
+
+        overflow-wrap: break-word;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        overflow: hidden;
     }
 
     .dropdownItem__name {
@@ -113,16 +147,20 @@
 
 
     .dropdownItem__email {
-        overflow: hidden;          /* Ẩn phần nội dung tràn ra ngoài khung */
-        text-overflow: ellipsis;   /* Hiển thị dấu ba chấm */
-        white-space: nowrap;       
+        overflow-wrap: break-word;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        overflow: hidden;
+        font-size: 0.9rem;    
     }
 
     .dropdownItem__darkmode {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        width: 80%;
         padding: 0.5rem;
         background-color: var(--navbar-darkmode-bg);
         color: var(--navbar-darkmode-color);
@@ -132,7 +170,8 @@
 
     .dropdownItem__border {
         // border-top: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
+        border-top: 1px solid var(--border-color);
+        padding-top: 0.75rem;
     }
 
     .dropdownItem__darkmode__item {
@@ -161,6 +200,74 @@
 
     .dropdownItem__darkmode__text {
 
+    }
+    
+    .dropdownItem__text__darkmode {
+        flex-grow: 1;
+    }  
+
+    // Toggle
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 45px;
+        height: 25px;
+    }
+
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--nav-darkmode-button);
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: '';
+        height: 17px;
+        width: 17px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+
+    input:checked+.slider {
+        background-color: var(--nav-darkmode-button);
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px var(--nav-darkmode-button);
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(20px);
+        -ms-transform: translateX(20px);
+        transform: translateX(20px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
     }
 }
 

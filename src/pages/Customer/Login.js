@@ -50,6 +50,10 @@ function Login() {
         }
     };
 
+    const googleAuth = () => {
+        window.open(`${process.env.REACT_APP_LOCAL_API_URL}/auth/google/callback`, '_self');
+    };
+
     return (
         <div className={clsx(styles.session, styles.login)}>
             <div className="container">
@@ -58,9 +62,11 @@ function Login() {
                         <div className={clsx(styles.left)}>
                             <div className={clsx(styles.logo)}>HoLuon</div>
                             <div className={clsx(styles.title)}>Log in to your Account</div>
-                            <div className={clsx(styles.subTitle)}>Welcome back! Select method to log in:</div>
+                            <div className={clsx(styles.subTitle)}>
+                                Welcome back! Select method to log in:
+                            </div>
                             <div className={clsx(styles.method__block)}>
-                                <div className={clsx(styles.method__item)}>
+                                <div className={clsx(styles.method__item)} onClick={googleAuth}>
                                     <span>
                                         <img
                                             src="/images/logo/google_logo.png"
@@ -79,7 +85,9 @@ function Login() {
                                     </div>
                                 */}
                             </div>
-                            <div className={clsx(styles.divider)}>----------or continue with email----------</div>
+                            <div className={clsx(styles.divider)}>
+                                ----------or continue with email----------
+                            </div>
                             <div className="form-floating mb-3 mt-2">
                                 <input
                                     type="text"
@@ -103,7 +111,10 @@ function Login() {
                                 <label for="floatingPassword">Password</label>
                             </div>
                             <Checkbox value={val} setValue={setVal}></Checkbox>
-                            <div className={clsx(styles.btn, styles.btnSubmit)} onClick={handleSubmit}>
+                            <div
+                                className={clsx(styles.btn, styles.btnSubmit)}
+                                onClick={handleSubmit}
+                            >
                                 Log In
                             </div>
                             <div className={clsx('pt-3 textCenter')}>
